@@ -5,10 +5,15 @@
         class="col flex column items-center text-center cursor-pointer"
         v-for="action in actionList"
         :key="action.title"
-        @click="action.go"
+        @click="action.doThing"
       >
         <div class="btn-action q-mb-sm">
-          <q-img width="24px" height="24px" :src="action.icon" />
+          <q-img
+            :class="action.class"
+            width="24px"
+            height="24px"
+            :src="action.icon"
+          />
         </div>
         {{ action.title }}
       </div>
@@ -48,6 +53,9 @@ export default defineComponent({
             ? 'Unfreeze Card'
             : 'Freeze Card'
         ),
+        class: `${
+          $store.state.cardModule.selectedCard.isCanceled ? 'faded' : ''
+        }`,
         icon: freeze_card_svg,
         doThing: function () {
           void $store.dispatch('cardModule/toggleCardStatus');
@@ -103,5 +111,9 @@ export default defineComponent({
 .btn-action {
   width: 24pt;
   height: 24pt;
+}
+
+.faded {
+  opacity: 30%;
 }
 </style>

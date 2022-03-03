@@ -41,7 +41,7 @@ const actions: ActionTree<CardStateInterface, StateInterface> = {
     context.commit('toggleCardStatus');
   },
   [ActionTypes.cancelCard](context) {
-    context.commit('toggleCardStatus');
+    context.commit('cancelCard');
   },
 };
 

@@ -13,7 +13,7 @@
           label="New card"
           no-caps
           icon="add_circle"
-          color="blue"
+          color="accent"
           @click="newCardDialogOpened = true"
         />
         <q-btn
