@@ -20,11 +20,11 @@
 
 <script type="ts">
 import { defineComponent } from 'vue';
-import home_mobile_svg from 'assets/icons/home-mobile.svg';
-import card_mobile_svg from 'assets/icons/card-mobile.svg';
-import payment_mobile_svg from 'assets/icons/payment-mobile.svg';
-import credit_mobile_svg from 'assets/icons/credit-mobile.svg';
-import profile_mobile_svg from 'assets/icons/profile-mobile.svg';
+import home_mobile_svg from 'src/assets/icons/home-mobile.svg';
+import card_mobile_svg from 'src/assets/icons/card-mobile.svg';
+import payment_mobile_svg from 'src/assets/icons/payment-mobile.svg';
+import credit_mobile_svg from 'src/assets/icons/credit-mobile.svg';
+import profile_mobile_svg from 'src/assets/icons/profile-mobile.svg';
 
 const linksList = [
   {

@@ -46,12 +46,12 @@
 import { defineComponent } from 'vue';
 import { Screen } from 'quasar';
 import MobileNav from 'components/MobileNav.vue';
-import aspire_logo from 'assets/aspire-logo.svg';
-import card_svg from 'assets/icons/card.svg';
-import home_svg from 'assets/icons/home.svg';
-import payment_svg from 'assets/icons/payment.svg';
-import credit_svg from 'assets/icons/credit.svg';
-import setting_svg from 'assets/icons/setting.svg';
+import aspire_logo from 'src/assets/aspire-logo.svg';
+import card_svg from 'src/assets/icons/card.svg';
+import home_svg from 'src/assets/icons/home.svg';
+import payment_svg from 'src/assets/icons/payment.svg';
+import credit_svg from 'src/assets/icons/credit.svg';
+import setting_svg from 'src/assets/icons/setting.svg';
 
 const linksList = [
   {

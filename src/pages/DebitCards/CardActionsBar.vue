@@ -28,11 +28,11 @@ import { useStore } from 'src/store';
 import { Screen } from 'quasar';
 import CardDetails from './CardDetails.vue';
 import RecentTransactions from './RecentTransactions.vue';
-import freeze_card_svg from 'assets/icons/freeze-card.svg';
-import limit_svg from 'assets/icons/limit.svg';
-import gpay_svg from 'assets/icons/gpay.svg';
-import replace_card_svg from 'assets/icons/replace-card.svg';
-import cancel_card_svg from 'assets/icons/cancel-card.svg';
+import freeze_card_svg from 'src/assets/icons/freeze-card.svg';
+import limit_svg from 'src/assets/icons/limit.svg';
+import gpay_svg from 'src/assets/icons/gpay.svg';
+import replace_card_svg from 'src/assets/icons/replace-card.svg';
+import cancel_card_svg from 'src/assets/icons/cancel-card.svg';
 
 export default defineComponent({
   name: 'CardActionsBar',

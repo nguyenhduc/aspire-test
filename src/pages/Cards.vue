@@ -49,7 +49,7 @@
 <script>
 import { defineComponent, ref } from 'vue';
 import { Screen } from 'quasar';
-import aspire_logo from 'assets/aspire_logo.svg';
+import aspire_logo from 'src/assets/aspire_logo.svg';
 import DebitCards from './DebitCards/DebitCards.vue';
 
 export default defineComponent({

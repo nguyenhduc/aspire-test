@@ -66,10 +66,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import recent_transactions_svg from 'assets/icons/recent-transactions.svg';
-import flight_svg from 'assets/icons/flights.svg';
-import megaphone_svg from 'assets/icons/megaphone.svg';
-import file_torage_svg from 'assets/icons/file-storage.svg';
+import recent_transactions_svg from 'src/assets/icons/recent-transactions.svg';
+import flight_svg from 'src/assets/icons/flights.svg';
+import megaphone_svg from 'src/assets/icons/megaphone.svg';
+import file_torage_svg from 'src/assets/icons/file-storage.svg';
 
 const recentTransactions = [
   {

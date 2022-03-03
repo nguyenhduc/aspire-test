@@ -13,7 +13,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import card_details_svg from 'assets/icons/card-details.svg';
+import card_details_svg from 'src/assets/icons/card-details.svg';
 
 export default defineComponent({
   name: 'CardDetails',
