@@ -4,7 +4,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white">
+    <q-footer elevated class="bg-white text-dark">
       <mobile-nav />
     </q-footer>
   </q-layout>
@@ -61,7 +61,7 @@ const linksList = [
   {
     title: 'Cards',
     icon: card_svg,
-    link: '/cards',
+    link: '/',
   },
   {
     title: 'Payments',

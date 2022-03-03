@@ -1,23 +1,21 @@
 <template>
-  <div class="card-actions text-blue">
+  <div class="card-actions text-dark">
     <div class="row card-actions__bar">
       <div
-        class="col flex column items-center text-center"
+        class="col flex column items-center text-center cursor-pointer"
         v-for="action in actionList"
         :key="action.title"
         @click="action.go"
       >
         <div class="btn-action q-mb-sm">
-          <q-img :src="action.icon" />
+          <q-img width="24px" height="24px" :src="action.icon" />
         </div>
         {{ action.title }}
       </div>
     </div>
-    <div v-if="Screen.lt.md">
-      <div class="card-actions__mobile-content q-pa-md">
-        <card-details class="q-mb-md" />
-        <recent-transactions />
-      </div>
+    <div class="card-actions__mobile-content q-pa-md" v-if="Screen.lt.md">
+      <card-details class="q-mb-md" />
+      <recent-transactions />
     </div>
   </div>
 </template>
@@ -51,7 +49,9 @@ export default defineComponent({
             : 'Freeze Card'
         ),
         icon: freeze_card_svg,
-        go: () => void $store.dispatch('cardModule/toggleCardStatus'),
+        doThing: function () {
+          void $store.dispatch('cardModule/toggleCardStatus');
+        },
       },
       {
         title: 'Set spend limit',
@@ -68,6 +68,9 @@ export default defineComponent({
       {
         title: 'Cancel card',
         icon: cancel_card_svg,
+        doThing: function () {
+          void $store.dispatch('cardModule/cancelCard');
+        },
       },
     ]);
     return {
@@ -80,6 +83,9 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .card-actions {
+  @media screen and (min-width: 1023px) {
+    width: 414px;
+  }
   &__bar {
     padding: 20px;
     border-radius: 16pt 16pt 0 0;

@@ -126,8 +126,9 @@ export default defineComponent({
 .expansion-header {
   background-color: #edf3ff;
   border-radius: 8pt;
-  width: 366px;
-  height: 72px;
+  @media screen and (min-width: 1023px) {
+    min-width: 366px;
+  }
 }
 .transaction-list {
   border-right: 1px solid #f0f0f0;

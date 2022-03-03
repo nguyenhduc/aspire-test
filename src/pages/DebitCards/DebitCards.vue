@@ -4,13 +4,15 @@
       <div class="col">
         <div class="flex justify-end">
           <q-btn
+            class="text-bold"
             flat
             no-caps
             icon="visibility"
-            color="positive"
+            color="primary"
             label="Show card number"
             @click="toggleShowCardNumber"
           />
+          <div class="placeholder" />
         </div>
       </div>
     </div>
@@ -31,8 +33,24 @@
               />
             </q-carousel-slide>
             <q-carousel-slide name="tv" class="column no-wrap flex-center">
+              <card
+                cardName="Mark Henry"
+                cardNumber="3457089352730961"
+                cardThru="12/20"
+                cardBank="aspire"
+                cardIssuing="Visa"
+                :isShowingCardNumber="isShowingCardNumber"
+              />
             </q-carousel-slide>
             <q-carousel-slide name="layers" class="column no-wrap flex-center">
+              <card
+                cardName="Mark Henry"
+                cardNumber="3457089352730961"
+                cardThru="12/20"
+                cardBank="aspire"
+                cardIssuing="Visa"
+                :isShowingCardNumber="isShowingCardNumber"
+              />
             </q-carousel-slide>
           </carousel>
           <card-actions-bar />
@@ -69,6 +87,7 @@ export default defineComponent({
 
     return {
       Screen: computed(() => Screen),
+      isShowingCardNumber,
       toggleShowCardNumber: () =>
         (isShowingCardNumber.value = !isShowingCardNumber.value),
     };
@@ -101,5 +120,9 @@ export default defineComponent({
 }
 .q-tab-panel {
   padding: 0;
+}
+.placeholder {
+  width: 366px;
+  height: 56px;
 }
 </style>

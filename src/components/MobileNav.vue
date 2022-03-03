@@ -1,5 +1,7 @@
 <template>
-  <div class="mobile-nav-wrapper">
+  <q-toolbar
+    class="text-primary full-width row no-wrap justify-evenly items-start content-start"
+  >
     <div class="mobile-nav text-grey q-pa-md">
       <div class="row q-mb-md">
         <div
@@ -15,7 +17,7 @@
       </div>
       <slot></slot>
     </div>
-  </div>
+  </q-toolbar>
 </template>
 
 <script type="ts">
@@ -60,11 +62,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.mobile-nav-wrapper {
-  position: relative;
-  height: 100vh;
-  background: #fff;
-}
 .mobile-nav {
   top: -25px;
   width: 100%;

@@ -14,6 +14,7 @@
           no-caps
           icon="add_circle"
           color="blue"
+          @click="newCardDialogOpened = true"
         />
         <q-btn
           class="lt-md"
@@ -22,6 +23,7 @@
           no-caps
           icon="add_circle"
           color="info"
+          @click="newCardDialogOpened = true"
         />
       </div>
     </div>
@@ -42,30 +44,37 @@
       <q-tab-panel class="debit-card-panel" name="debit">
         <debit-cards />
       </q-tab-panel>
+      <q-tab-panel class="debit-card-panel" name="all"> </q-tab-panel>
     </q-tab-panels>
   </q-page>
+  <q-dialog v-model="newCardDialogOpened">
+    <new-card-form />
+  </q-dialog>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue';
 import { Screen } from 'quasar';
 import aspire_logo from 'src/assets/aspire_logo.svg';
 import DebitCards from './DebitCards/DebitCards.vue';
+import NewCardForm from 'components/NewCardForm.vue';
 
 export default defineComponent({
   name: 'PageCards',
   components: {
     DebitCards,
-  },
-  computed: {
-    Screen() {
-      return Screen;
-    },
+    NewCardForm,
   },
   setup() {
+    const newCardDialogOpened = ref(false);
+    const toggleNewCardDialog = () => (newCardDialogOpened.value = true);
+
     return {
+      Screen: computed(() => Screen),
       aspire_logo,
       tab: ref('debit'),
+      toggleNewCardDialog,
+      newCardDialogOpened,
     };
   },
 });

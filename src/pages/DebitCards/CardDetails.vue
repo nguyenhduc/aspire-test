@@ -28,9 +28,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .expansion-header {
-  width: 366px;
-  height: 72px;
   background-color: #edf3ff;
   border-radius: 8pt;
+
+  @media screen and (min-width: 1023px) {
+    min-width: 366px;
+  }
 }
 </style>
